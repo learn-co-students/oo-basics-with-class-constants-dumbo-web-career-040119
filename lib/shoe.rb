@@ -1,9 +1,12 @@
 class Shoe
-  attr_accessor :color, :size, :material, :condition
-  attr_reader :brand
+  attr_accessor :color, :size, :material, :condition, :brand
+
+  BRANDS = []
 
   def initialize(brand)
     @brand = brand
+    BRANDS.include?.map {|item| item != brand}
+    # BRANDS << brand unless BRANDS.include? (brand)
   end
 
   def cobble
